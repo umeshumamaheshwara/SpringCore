@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--
+    <bean id="student" class="org.example.Student" autowire="byType">
+        <property name="id" value="1001"/>
+        <property name="name" value="Umesh"/>
+        <property name="address" ref="address"/>&lt;!&ndash;or else we dont need to pass the address we can pass only in the adress class only it will take &ndash;&gt;
+    </bean>
+    <bean id="address" class="org.example.Address">
+        <property name="city" value="Bengaluru"/>
+    </bean>-->
+
+
+
+   <!-- &lt;!&ndash; Student bean autowired byName &ndash;&gt;
+    <bean id="student" class="org.example.Student" autowire="byName">
+        <property name="id" value="101"/>
+        <property name="name" value="Umesh"/>
+    </bean>
+
+    &lt;!&ndash; Bean id must match property name &ndash;&gt;
+    <bean id="address" class="org.example.Address">
+        <property name="city" value="Bengaluru"/>
+    </bean>
+-->
+
+
+
+
+    <!-- Student bean with autowire constructor -->
+    <bean id="student" class="org.example.Student" autowire="constructor">
+        <property name="id" value="101"/>
+        <property name="name" value="Umesh"/>
+    </bean>
+
+    <!-- Address bean to be autowired -->
+    <bean id="address" class="org.example.Address">
+        <property name="city" value="Bengaluru"/>
+    </bean>
+
+
+
+
+
+
+
+</beans>
