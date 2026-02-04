@@ -1,0 +1,31 @@
+package org.example;
+
+
+public class Address {
+
+    private String city;
+
+    public Address() {
+        // default constructor required by Spring
+    }
+
+    public Address(String city) {
+        this.city = city;
+    }
+
+    // Getter & Setter for city
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {   // required for Spring property injection
+        this.city = city;
+    }
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "city='" + city + '\'' +
+                '}';
+    }
+}

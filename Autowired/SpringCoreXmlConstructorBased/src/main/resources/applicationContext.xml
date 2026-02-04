@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+<context:component-scan base-package="org.example" />
+
+    <!-- Address Bean -->
+    <bean id="address1" class="org.example.Address">
+        <constructor-arg name="city" value="Bengaluru"/>
+    </bean>
+
+    <!-- Student 1 -->
+    <bean id="student" class="org.example.Student">
+        <constructor-arg name="id" value="200"/>
+        <constructor-arg name="name" value="Umesh"/>
+        <constructor-arg name="address" ref="address1"/>
+    </bean>
+
+
+    <!--<bean id="student2" class="org.example.Student">
+        <constructor-arg name="id" value="201"/>
+        <constructor-arg name="name" value="Ravi"/>
+        <constructor-arg name="address" ref="address2"/>
+    </bean>
+
+    <bean id="address2" class="org.example.Address">
+        <constructor-arg name="city" value="Mysuru"/>
+    </bean>-->
+
+
+</beans>
